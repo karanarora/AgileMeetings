@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Description" content="Information architecture, Web Design, Web Standards." />
+    <meta name="Keywords" content="your, keywords" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Author" content="Erwin Aligam - ealigam@gmail.com" />
+    <meta name="Robots" content="index,follow" />
+    <link rel="stylesheet" href="stylesheets/MarketPlace.css" type="text/css" />
+    <title>Agile Meetings</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!-- wrap starts here -->
+    <div id="wrap">
+      <!--header -->
+      <div id="header">
+        <div id="header-links">
+          <p>
+            <a href="index.html">Home</a> |
+            <a href="index.html">Contact</a> |
+            <a href="index.html">Site Map</a>
+          </p>
+        </div>
+        <!--header ends-->
+      </div>
+      <div id="header-photo">
+        <h1 id="logo-text"><a href="index.html" title="">Agile Meetings</a></h1>
+        <h2 id="slogan">site slogan goes here...</h2>
+      </div>
+      <!-- navigation starts-->
+      <div  id="nav">
+        <ul>
+          <li id="current"><a href="index.html">Home</a></li>
+          <li><a href="2-columns.html">Content</a></li>
+          <li><a href="index.html">Archives</a></li>
+          <li><a href="index.html">Services</a></li>
+          <li><a href="index.html">Support</a></li>
+          <li><a href="index.html">About</a></li>
+        </ul>
+        <!-- navigation ends-->
+      </div>
+      <!-- content-wrap starts -->
+      <div id="content-wrap" class="three-col"  >
+        <div id="sidebar">
+          <h1>Search Box</h1>
+          <form action="#" class="searchform">
+            <p>
+              <input name="search_query" class="textbox" type="text" />
+              <input name="search" class="button" value="Search" type="submit" />
+            </p>
+          </form>
+
+          <h1>Sidebar Menu</h1>
+          <ul class="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><%= link_to 'Meetings', meetings_path %></li>
+            <li><%= link_to 'Attendees' , attendees_path %> </li>
+            <li><%= link_to 'Minutes Of Meeting' , minutes_of_meetings_path %></li>
+            <li><%= link_to 'Ruby sync Up' , ruby_sync_ups_path %></li>
+            <li><%= link_to 'Person Form' , people_path %></li>
+          </ul>
+
+          <h1>Useful Links</h1>
+          <ul class="sidemenu">
+            <li><a href="https://www.github.com">Github</a></li>
+            <li><a href="https://www.heroku.com">Heroku</a></li>
+            <li><a href="http://www.alistapart.com">Databases</a></li>
+            <li><a href="http://www.cssmania.com">CSS Mania</a></li>
+            <li><a href="http://www.dark-i.com/">HTML</a></li>
+          </ul>
+
+          <h1>Ruby Blogs</h1>
+          <ul class="sidemenu">
+            <li><a href="http://www.4templates.com/?aff=ealigam">rubyforum</a></li>
+            <li><a href="http://store.templatemonster.com?aff=ealigam">rubyblog1</a></li>
+            <li><a href="http://www.fotolia.com/partner/114283">rubyblog2</a></li>
+            <li><a href="http://www.dreamstime.com/res338619">rubyblog2</a></li>
+            <li><a href="http://www.dreamhost.com/r.cgi?287326">rubyblog3</a></li>
+          </ul>
+
+          <h1>Wise Words</h1>
+          <p>&quot;We are what we repeatedly do. Excellence, then,
+			is not an act, but a habit.&quot; </p>
+
+          <p class="align-right">- Aristotle</p>
+
+          <!-- sidebar ends -->
+        </div>
+
+        <div id="rightcolumn">
+
+          <h1>Latest News</h1>
+          <p>If interested in supporting our work and would like to contribute, you are
+			welcome to make a small donation through the
+            <a href="http://www.styleshout.com/">latest info</a></p>
+
+          <h1>Some Text</h1>
+          <p>Text goes here... </p>
+
+        </div>
+        <div id="main">
+          <%= yield %>
+        </div>
+        <!-- content-wrap ends-->
+      </div>
+      <!-- footer starts -->
+      <div id="footer-wrap">
+        <div id="footer">
+          <p>
+            &copy; 2011 <strong>Firm </strong> |
+			Design by: <a href="http://www.styleshout.com/">styleshout</a> |
+			Valid <a href="http://validator.w3.org/check?uri=referer">XHTML</a> |
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <a href="index.html">Home</a>&nbsp;|&nbsp;
+            <a href="index.html">Sitemap</a>&nbsp;|&nbsp;
+            <a href="index.html">RSS Feed</a>
+          </p>
+        </div>
+      </div>
+      <!-- footer ends-->
+      <!-- wrap ends here -->
+    </div>
+  </body>
+</html>

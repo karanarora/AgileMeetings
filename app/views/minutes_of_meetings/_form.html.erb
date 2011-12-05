@@ -1,0 +1,29 @@
+<%= form_for(@minutes_of_meeting) do |f| %>
+  <% if @minutes_of_meeting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@minutes_of_meeting.errors.count, "error") %> prohibited this minutes_of_meeting from being saved:</h2>
+
+      <ul>
+      <% @minutes_of_meeting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :DiscussionTitle %><br />
+    <%= f.text_field :DiscussionTitle %>
+  </div>
+  <div class="field">
+    <%= f.label :DiscussionDate %><br />
+    <%= f.text_field :DiscussionDate %>
+  </div>
+  <div class="field">
+    <%= f.label :DiscussionDescription %><br />
+    <%= f.text_area :DiscussionDescription %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

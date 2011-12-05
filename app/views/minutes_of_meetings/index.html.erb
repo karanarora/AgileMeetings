@@ -1,0 +1,27 @@
+<h1>Listing minutes_of_meetings</h1>
+
+<table>
+  <tr>
+    <th>Discussiontitle</th>
+    <th>Discussiondate</th>
+    <th>Discussiondescription</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @minutes_of_meetings.each do |minutes_of_meeting| %>
+  <tr>
+    <td><%= minutes_of_meeting.DiscussionTitle %></td>
+    <td><%= minutes_of_meeting.DiscussionDate %></td>
+    <td><%= minutes_of_meeting.DiscussionDescription %></td>
+    <td><%= link_to 'Show', minutes_of_meeting %></td>
+    <td><%= link_to 'Edit', edit_minutes_of_meeting_path(minutes_of_meeting) %></td>
+    <td><%= link_to 'Destroy', minutes_of_meeting, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Minutes of meeting', new_minutes_of_meeting_path %>

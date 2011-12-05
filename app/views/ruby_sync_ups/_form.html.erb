@@ -1,0 +1,25 @@
+<%= form_for(@ruby_sync_up) do |f| %>
+  <% if @ruby_sync_up.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ruby_sync_up.errors.count, "error") %> prohibited this ruby_sync_up from being saved:</h2>
+
+      <ul>
+      <% @ruby_sync_up.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :Title %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :Description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
